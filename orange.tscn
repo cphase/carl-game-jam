@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkoyq5ls1nfkm"]
+
+[ext_resource type="Texture2D" uid="uid://df3atq3lyq3bs" path="res://orange_prototype.png" id="1_jkp6y"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jo8b2"]
+radius = 0.25
+
+[node name="orange" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("SphereShape3D_jo8b2")
+
+[node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
+pixel_size = 0.004
+texture = ExtResource("1_jkp6y")
