@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var direction_time = 1.5
 var frame_counter = 59
 var current_direction = 0
+var oranges_picked_up = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,7 +28,8 @@ func _process(delta):
 	#move_and_collide(Vector3(0, 0, speed *.05 * 60 * delta))
 	
 	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if collision.get_collider().name == "orange":
-			print("picking up orange")
-			#collision.get_collider().
+		var collision_object = get_slide_collision(i).get_collider()
+		if collision_object.is_inside_tree() and collision_object.is_in_group("fruit"):
+			oranges_picked_up += 1
+			print("picking up orange ", oranges_picked_up)
+			collision_object.get_parent().remove_child(collision_object)
