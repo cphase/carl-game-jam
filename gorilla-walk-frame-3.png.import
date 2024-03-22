@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw7x5m3aftfbf"
-path.s3tc="res://.godot/imported/gorilla-walk-prototype-1.png-c4d55572205b1585a13b7880af274c54.s3tc.ctex"
+uid="uid://bkguy5nelj4ep"
+path="res://.godot/imported/gorilla-walk-frame-3.png-e9567f689c4ba898713e33254fd3245a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://gorilla-walk-prototype-1.png"
-dest_files=["res://.godot/imported/gorilla-walk-prototype-1.png-c4d55572205b1585a13b7880af274c54.s3tc.ctex"]
+source_file="res://gorilla-walk-frame-3.png"
+dest_files=["res://.godot/imported/gorilla-walk-frame-3.png-e9567f689c4ba898713e33254fd3245a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

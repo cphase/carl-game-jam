@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo2ckktpu443k"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jo8b2"]
+radius = 0.25
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ob2j3"]
+load_path = "res://.godot/imported/orange_prototype.png-317b6d594e91b2e4cea36bdc724d1f88.s3tc.ctex"
+
+[node name="orange" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("SphereShape3D_jo8b2")
+
+[node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
+pixel_size = 0.004
+texture = SubResource("CompressedTexture2D_ob2j3")

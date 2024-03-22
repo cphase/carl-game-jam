@@ -1,7 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bkoyq5ls1nfkm"]
 
 [ext_resource type="Script" path="res://orange.gd" id="1_0r35a"]
-[ext_resource type="Texture2D" uid="uid://df3atq3lyq3bs" path="res://orange_prototype.png" id="1_jkp6y"]
 [ext_resource type="Texture2D" uid="uid://cpif3lsjnivt" path="res://orange-frame-1.png" id="2_4n7e4"]
 [ext_resource type="Texture2D" uid="uid://b3qkwd7br2h2u" path="res://orange-frame-2.png" id="3_uq7vn"]
 [ext_resource type="Texture2D" uid="uid://cl8vfpg8i762m" path="res://orange-frame-3.png" id="4_0pxch"]
@@ -9,6 +8,9 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jo8b2"]
 radius = 0.25
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ob2j3"]
+load_path = "res://.godot/imported/orange_prototype.png-317b6d594e91b2e4cea36bdc724d1f88.s3tc.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma76n"]
 animations = [{
@@ -70,10 +72,10 @@ shape = SubResource("SphereShape3D_jo8b2")
 [node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
 visible = false
 pixel_size = 0.004
-texture = ExtResource("1_jkp6y")
+texture = SubResource("CompressedTexture2D_ob2j3")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CollisionShape3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_ma76n")
-animation = &"spin"
+animation = &"slow_spin"
 autoplay = "spin"

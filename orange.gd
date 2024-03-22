@@ -5,17 +5,19 @@ var started_slowing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$CollisionShape3D/AnimatedSprite3D.play("spin")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if linear_velocity.length() > .5:
-		$CollisionShape3D/AnimatedSprite3D.play("spin")
-	elif linear_velocity.length() > 0.005:
-		$CollisionShape3D/AnimatedSprite3D.play("slow_spin")
-	else:
-		$CollisionShape3D/AnimatedSprite3D.pause()
+	$CollisionShape3D/AnimatedSprite3D.sprite_frames.set_animation_speed("spin", linear_velocity.length() * 4)
+	#if linear_velocity.length() > .5:
+		#$CollisionShape3D/AnimatedSprite3D.play("spin")
+	#elif linear_velocity.length() > 0.005:
+		#$CollisionShape3D/AnimatedSprite3D.sprite_frames.set_animation_speed("spin", 8)
+	#else:
+		#$CollisionShape3D/AnimatedSprite3D.pause()
 	#if linear_velocity.y < -0.5:
 		#started_falling = true
 		#

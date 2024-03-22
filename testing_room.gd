@@ -30,7 +30,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	frame_counter += 1
-	if frame_counter >= 10:
+	if frame_counter >= 60:
 		spawn_orange()
 		frame_counter = 0
 	pass

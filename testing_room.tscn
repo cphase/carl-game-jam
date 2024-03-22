@@ -1,66 +1,36 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6xce1qvokg3a"]
+[gd_scene load_steps=13 format=3 uid="uid://c6xce1qvokg3a"]
 
 [ext_resource type="Script" path="res://gorilla.gd" id="1_blgqh"]
 [ext_resource type="Script" path="res://testing_room.gd" id="1_hjfnh"]
-[ext_resource type="Texture2D" uid="uid://7o5favbtjen2" path="res://gorilla-standing.png" id="2_d8w24"]
-[ext_resource type="Texture2D" uid="uid://cw7x5m3aftfbf" path="res://gorilla-walk-prototype-1.png" id="3_or1gj"]
-[ext_resource type="Texture2D" uid="uid://5oe02smlabfk" path="res://gorilla-walk-prototype-2.png" id="4_olnrl"]
-[ext_resource type="Texture2D" uid="uid://6358faaw0r34" path="res://gorilla-walk-prototype-3.png" id="5_7d4gq"]
-[ext_resource type="Texture2D" uid="uid://dqoph3ih1n2fy" path="res://gorilla-walk-prototype-4.png" id="6_e7v4o"]
-[ext_resource type="Texture2D" uid="uid://3q7au3n3s2qu" path="res://jungle_path_placeholder.jpg" id="7_mexa0"]
-[ext_resource type="Texture2D" uid="uid://dibojebstvhib" path="res://gorilla-walk-test-1.png" id="7_mx8ih"]
-[ext_resource type="Texture2D" uid="uid://050aqgc0038g" path="res://gorilla-walk-test-2.png" id="8_xr3nt"]
-[ext_resource type="Texture2D" uid="uid://ccdwly3yll0a5" path="res://gorilla-walk-test-3.png" id="9_e7j72"]
-[ext_resource type="Texture2D" uid="uid://iqnronu07qk4" path="res://gorilla-walk-test-4.png" id="10_h6i52"]
+[ext_resource type="Texture2D" uid="uid://61u736w5ig7x" path="res://gorilla-walk-frame-1.png" id="4_04n25"]
+[ext_resource type="Texture2D" uid="uid://w5imfq4kgh4u" path="res://gorilla-walk-frame-2.png" id="5_jbyvy"]
+[ext_resource type="Texture2D" uid="uid://bkguy5nelj4ep" path="res://gorilla-walk-frame-3.png" id="6_w67i4"]
+[ext_resource type="Texture2D" uid="uid://c3yse0ogoxa4" path="res://gorilla-walk-frame-4.png" id="7_44jts"]
+[ext_resource type="Texture2D" uid="uid://didiouicb2kkm" path="res://jungle_path.jpg" id="12_ooith"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_if2a7"]
 size = Vector3(20, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a138m"]
-size = Vector3(3, 2.75, 0.15)
+size = Vector3(2.25, 2.75, 0.15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mrjfu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_d8w24")
+"texture": ExtResource("4_04n25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jbyvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w67i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_44jts")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_or1gj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_olnrl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_7d4gq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_e7v4o")
-}],
-"loop": true,
-"name": &"walking_prototype",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_mx8ih")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_xr3nt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_e7j72")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_h6i52")
-}],
-"loop": true,
-"name": &"walking_test",
+"name": &"walking",
 "speed": 5.0
 }]
 
@@ -93,40 +63,11 @@ shape = SubResource("BoxShape3D_a138m")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="gorilla"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.857, 0, 0, 0)
-offset = Vector2(0, 450)
+offset = Vector2(0, 700)
+pixel_size = 0.0075
 sprite_frames = SubResource("SpriteFrames_mrjfu")
-animation = &"walking_test"
-autoplay = "walking_test"
-frame_progress = 0.719802
-
-[node name="gorilla2" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="gorilla2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.375, 0)
-shape = SubResource("BoxShape3D_a138m")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="gorilla2"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.857, 0, 0, 0)
-offset = Vector2(0, 450)
-flip_h = true
-double_sided = false
-sprite_frames = SubResource("SpriteFrames_mrjfu")
-autoplay = "default"
-
-[node name="gorilla3" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 8)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="gorilla3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.375, 0)
-shape = SubResource("BoxShape3D_a138m")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="gorilla3"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.857, 0, 0, 0)
-offset = Vector2(0, 450)
-double_sided = false
-sprite_frames = SubResource("SpriteFrames_mrjfu")
-autoplay = "default"
+animation = &"walking"
+autoplay = "walking"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 3, 12)
@@ -144,6 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 shape = SubResource("WorldBoundaryShape3D_3e17w")
 
 [node name="Sprite3D" type="Sprite3D" parent="background/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 6, 0)
-pixel_size = 0.04
-texture = ExtResource("7_mexa0")
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 3.5, 0)
+pixel_size = 0.022
+texture = ExtResource("12_ooith")

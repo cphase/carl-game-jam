@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3q7au3n3s2qu"
-path.s3tc="res://.godot/imported/jungle_path_placeholder.jpg-b43196d6ef984bc9c28236dba74e02af.s3tc.ctex"
+uid="uid://w5imfq4kgh4u"
+path="res://.godot/imported/gorilla-walk-frame-2.png-98f6677aeebb40f528569b8b1e55c421.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://jungle_path_placeholder.jpg"
-dest_files=["res://.godot/imported/jungle_path_placeholder.jpg-b43196d6ef984bc9c28236dba74e02af.s3tc.ctex"]
+source_file="res://gorilla-walk-frame-2.png"
+dest_files=["res://.godot/imported/gorilla-walk-frame-2.png-98f6677aeebb40f528569b8b1e55c421.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

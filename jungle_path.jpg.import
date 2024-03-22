@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://050aqgc0038g"
-path.s3tc="res://.godot/imported/gorilla-walk-test-2.png-d7a7fd47559da0aa555d4682efb78c57.s3tc.ctex"
+uid="uid://didiouicb2kkm"
+path.s3tc="res://.godot/imported/jungle_path.jpg-b88989315712be81e5d18f17a9ca2b37.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gorilla-walk-test-2.png"
-dest_files=["res://.godot/imported/gorilla-walk-test-2.png-d7a7fd47559da0aa555d4682efb78c57.s3tc.ctex"]
+source_file="res://jungle_path.jpg"
+dest_files=["res://.godot/imported/jungle_path.jpg-b88989315712be81e5d18f17a9ca2b37.s3tc.ctex"]
 
 [params]
 
